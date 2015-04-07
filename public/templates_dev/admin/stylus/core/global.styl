@@ -1,0 +1,258 @@
+
+// Reset
+
+*
+	margin 0
+	padding 0
+	border 0
+	outline 0
+
+
+// Base styles
+
+body
+	-webkit-font-smoothing antialiased
+	background global_bg
+
+body, button, input, textarea, select
+	font-family font
+	color global_color
+	font-size global_size
+	line-height global_lh
+
+a, button, input, textarea, select
+	transition tn
+
+a
+	color color
+	text-decoration none
+	&.a-classic
+		text-decoration underline
+
+button, select, label
+	&:hover
+		cursor pointer
+
+p
+	margin-bottom 15px
+
+h1, h2, h3, h4
+	font-family font_2
+	margin-bottom 15px
+
+h1
+.h1
+	title h1
+
+h2
+.h2
+	title h2
+
+h3
+.h3
+	title h3
+
+h4
+.h4
+	title h4
+
+h5		
+.h5
+	title h5
+
+ul
+ol
+	list-style-type none
+
+img
+	display block
+	&.img-ma
+		margin 0 auto
+	&.img-mw
+		max-width 100%
+	&.img-circle
+		radius 50%
+
+svg
+	display block
+	max-width 100%
+
+
+.table-container
+	overflow auto
+	table
+		width 100%
+		
+table
+	border-collapse collapse
+	line-height global_lh
+	text-align left
+	background white
+	td
+	th
+		border border
+		padding 15px 20px
+		@media break2
+			padding 10px
+	th
+		background-color dark
+		border-color dark
+		color white
+
+
+// Particular classes
+
+.clear
+	clear both
+
+.center
+	text-align center
+
+.left
+	text-align left
+
+.right
+	text-align right
+
+.float-left
+	float left
+
+.float-right
+	float right
+
+.overflow
+	overflow hidden
+
+.none
+	display none
+
+.nowrap
+	white-space nowrap
+
+.mb0
+	margin-bottom 0
+.mb5
+	margin-bottom 5px
+.mb10
+	margin-bottom 10px
+.mb15
+	margin-bottom 15px
+.mb20
+	margin-bottom 20px
+
+.sep
+	height sep
+	&.sep-2
+		height sep*2
+		@media break1
+			height sep
+	&.sep-3
+		height sep*3
+		@media break2
+			height sep*2
+		@media break1
+			height sep
+	&.sep-4
+		height sep*4
+		@media break3
+			height sep*3
+		@media break2
+			height sep*2
+		@media break1
+			height sep
+
+
+// Base layout
+
+.limit
+	max-width limit
+	margin 0 auto
+	position relative
+
+.inner
+	padding sep
+	@media break1
+		padding (sep/2)
+	&.inner-half
+		padding (sep/2)
+	&.inner-2
+		padding sep*2 sep
+		@media break2
+			padding sep
+		@media break1
+			padding (sep/2)
+	&.inner-3
+		padding sep*3 sep
+		@media break3
+			padding sep*2 sep
+		@media break2
+			padding sep
+		@media break1
+			padding (sep/2)
+	&.inner-4
+		padding sep*4 sep
+		@media break3
+			padding sep*3 sep
+		@media break2
+			padding sep*2 sep
+		@media break1
+			padding sep*2 (sep/2)
+
+.nomobile
+	display block
+.mobile
+	display none
+@media break1
+	.nomobile
+		display none
+	.mobile
+		display block
+
+
+// Generic animation
+
+.in
+	display block !important
+	animation fadeIn .5s ease both
+	&.out
+		display block !important
+		animation fadeOut .5s ease both
+
+
+// Font awesome
+
+.fa
+	vertical-align middle
+
+// Vertical align
+.va
+	position relative
+
+
+// Proportional element
+
+.prop
+	display block
+	proportion 1,1
+	position relative
+	&.prop-2-1
+		proportion 2,1
+	&.prop-4-3
+		proportion 4,3
+	&.prop-16-9
+		proportion 16,9
+
+
+// Cover
+.cover
+	cover absolute
+	display block
+
+// Dscrol
+.dscroll
+	opacity 0
+	&.dscroll-in
+		animation fadeIn 1s ease backwards
+		opacity 1
+
+

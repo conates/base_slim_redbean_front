@@ -1,0 +1,92 @@
+
+
+.button, .button.button
+	font-family font
+	text-decoration none
+	display inline-block
+	border 1px solid transparent
+	width auto
+	transition tn
+	text-align center
+	margin-bottom 2px
+	vertical-align middle
+	radius rad_2
+
+	// Types
+
+	background light
+	color gray
+	&:hover
+		cursor pointer
+		color white
+		background color
+		text-decoration none
+
+	&.button-primary
+		color white
+		background color
+		&:hover
+			background lighten(color,10%)
+
+	&.button-secondary
+		color white
+		background color_2
+		&:hover
+			background lighten(color_2,10%)
+
+	&.button-dark
+		color white
+		background dark
+		&:hover
+			background color
+	
+	&.button-white
+		color dark
+		background white
+		&:hover
+			background color
+			color white
+	
+	&.button-line
+		border-color white
+		background transparent
+		color white
+		&:hover
+			background color
+			border-color color
+	
+	&.button-disabled
+		background light
+		border-color light
+		&:hover
+			background light
+			border-color light
+			cursor default
+
+	&.button-hover-2
+		&:hover
+			background color_2
+			color white
+
+
+	// Sizes
+
+	font-size 16px
+	line-height 16px
+	padding 8px 15px
+
+	&.button-small
+		font-size 14px
+		line-height 14px
+		padding 6px 10px
+	
+	&.button-medium
+		font-size 18px
+		line-height 18px
+		padding 10px 22px
+	
+	&.button-big
+		font-size 20px
+		line-height 20px
+		padding 12px 25px
+

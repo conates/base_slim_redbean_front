@@ -1,0 +1,127 @@
+
+header_height        = 80px
+header_height_min    = 60px
+header_bg            = black
+header_color         = white
+header_height_change = break3
+
+header_menu_width    = 400px
+header_menu_bg       = dark
+header_menu_color    = white
+header_menu_show     = break2
+
+
+header
+	position relative
+	z-index 10
+	
+	.header-inner
+		padding 10px sep
+		@media header_height_change
+			padding 0
+			
+	.header-limit
+		height header_height
+		max-width limit
+		margin 0 auto
+		overflow hidden
+		@media header_height_change
+			height header_height_min
+
+	.header-top 
+		position fixed
+		top 0
+		left 0
+		width 100%
+		background header_bg
+	
+	.header-logo
+		float left
+		margin-right 20px
+		a
+			display block
+
+			/* test */
+			background color
+			color white
+			font-weight bold
+			font-size 200%
+			padding 30px 20px
+			margin-top -10px  
+			@media header_height_change
+				padding 20px
+				margin-top 0
+
+	.header-nav
+		@media header_menu_show
+			display none
+		ul
+			li
+				display inline-block
+				a
+					padding 20px
+					display inline-block
+					color header_color
+				ul
+					display none
+						
+	.header-menu-button
+		z-index 2
+		display none
+		position fixed
+		top 0
+		right 0
+		@media header_menu_show
+			display block
+	
+	.header-menu
+		z-index 1
+		position fixed
+		top 0
+		right 0
+		height 100%
+		overflow hidden
+		display none
+		@media header_menu_show
+			display block
+
+		.header-menu-inner
+			background darken(header_menu_bg,20%)
+			height 100%
+			width header_menu_width
+			position relative
+			max-width 100%
+			margin 0 0 0 auto
+		
+		.secretmenu-lvl
+			background header_menu_bg
+
+		.header-menu-content
+			ul
+				li
+					a
+						padding 20px
+						display block
+						color header_menu_color
+						border-bottom 1px solid rgba(255,255,255,.1)
+					ul
+						display none
+						display block
+						background red
+						cover absolute
+						overflow auto
+						opacity .5
+						display none
+
+
+
+#body
+	@media header_menu_show
+		cover absolute
+		overflow auto
+	
+	.body-content
+		padding-top header_height		
+		@media header_height_change
+			padding-top header_height_min
+
